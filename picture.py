@@ -26,11 +26,11 @@ def get_img(price, open_price, low_price, high_price):
     img = Image.new('RGB', (1024, 1024), color=(34, 33, 35))
     d = ImageDraw.Draw(img)
 
-    font_rubx = ImageFont.truetype("Roboto-Bold.ttf", 140)
-    font_usdrub = ImageFont.truetype("Roboto-Bold.ttf", 80)
-    font_dollar = ImageFont.truetype("Roboto-Bold.ttf", 80)
-    font_procent = ImageFont.truetype("RobotoCondensed-Regular.ttf", 80)
-    font_more = ImageFont.truetype("RobotoCondensed-Regular.ttf", 50)
+    font_rubx = ImageFont.truetype("ttf/Roboto-Bold.ttf", 140)
+    font_usdrub = ImageFont.truetype("ttf/Roboto-Bold.ttf", 80)
+    font_dollar = ImageFont.truetype("ttf/Roboto-Bold.ttf", 80)
+    font_procent = ImageFont.truetype("ttf/RobotoCondensed-Regular.ttf", 80)
+    font_more = ImageFont.truetype("ttf/RobotoCondensed-Regular.ttf", 50)
 
 
     d.text((85, 290), 'RUB=₽', fill=(255,255,255), font=font_rubx)

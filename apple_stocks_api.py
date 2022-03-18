@@ -1,4 +1,5 @@
 import os
+import re
 
 import requests
 
@@ -23,8 +24,11 @@ def get_dollar():
     }
 
     response = requests.get(url=url, headers=headers).json()
+    #response = requests.get(url=url, headers=headers)
+
+    #pprint(response.headers)
     return response['quotes'][0]['quoteDetail']
 
-#if __name__ == '__main__':
-#    from pprint import pprint
-#    pprint(get_dollar())
+if __name__ == '__main__':
+    from pprint import pprint
+    pprint(get_dollar())

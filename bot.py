@@ -2,7 +2,8 @@ import os
 import time
 
 from apple_stocks_api import get_dollar
-from picture import get_img
+#from picture import get_img
+from picture_v2 import get_img
 
 import telebot
 
@@ -36,10 +37,10 @@ def get_result():
         )
 
 
-try:
-    while True:
-        get_result()
-        set_photo()
-        time.sleep(600)
-except Exception as err:
-    bot.send_message(TG_ADMIN_ID, f'[!] Bot offline !\n\n{err}')
+#try:
+while True:
+    get_result()
+    set_photo()
+    time.sleep(600)
+#except Exception as err:
+#    bot.send_message(TG_ADMIN_ID, f'[!] Bot offline !\n\n{err}')
