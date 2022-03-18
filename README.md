@@ -1,4 +1,4 @@
-# dollar_pic_bot
+# Dollar picture bot
 
 UP          |  DOWN
 :-------------------------:|:-------------------------:
