@@ -1,5 +1,10 @@
 # dollar_pic_bot
-![stocks_rub](https://user-images.githubusercontent.com/83474704/157232356-3cf3d291-557d-42c3-80fe-95ab973635df.png)
+
+UP          |  DOWN
+:-------------------------:|:-------------------------:
+|![stocks_rub](https://user-images.githubusercontent.com/83474704/159005664-0aab6a96-b175-45d0-816d-cd8d61a45616.png)|![stocks_rub_2](https://user-images.githubusercontent.com/83474704/159005672-5052eda3-3058-4459-9bb7-ea2d18179720.png)|
+ 
+
 
 ## Create .env:
 ```env
