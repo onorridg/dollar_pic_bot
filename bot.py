@@ -37,10 +37,10 @@ def get_result():
         )
 
 
-#try:
-while True:
-    get_result()
-    set_photo()
-    time.sleep(600)
-#except Exception as err:
-#    bot.send_message(TG_ADMIN_ID, f'[!] Bot offline !\n\n{err}')
+try:
+    while True:
+        get_result()
+        set_photo()
+        time.sleep(600)
+except Exception as err:
+    bot.send_message(TG_ADMIN_ID, f'[!] Bot offline !\n\n{err}')

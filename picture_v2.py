@@ -55,7 +55,7 @@ def get_img(price, open_price, low_price, high_price):
 
 
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
     #get_img(103.61, 102.38, 100.62, 104.18)
-    get_img(90.61, 102.38, 100.62, 104.18)
+    #get_img(90.61, 102.38, 100.62, 104.18)
 
