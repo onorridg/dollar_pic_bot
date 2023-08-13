@@ -2,8 +2,7 @@ import os
 import time
 
 from apple_stocks_api import get_dollar
-#from picture import get_img
-from picture_v2 import get_img
+from gen_pic import get_img
 
 import telebot
 
