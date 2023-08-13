@@ -36,6 +36,7 @@ def get_result():
         )
 
 
+bot.send_message(TG_ADMIN_ID, f'[+] Bot started')
 try:
     while True:
         get_result()
