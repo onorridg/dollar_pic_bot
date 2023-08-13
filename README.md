@@ -42,6 +42,32 @@ https://api.telegram.org/bot<YourBOTToken>/getUpdates
 * Изменение профиля группы (для изменения фото группы на фото курса)
 * Удаление сообщений (удаление сообщений об изменении фото, и для удаления самого обновленного фото из сообщений. Всё это нужно, чтобы не засорять группу.)
 
+## Запуск через `docker-compose`:
+```bash
+git clone git@github.com:onorridg/dollar_pic_bot.git
+```
+```bash
+cd dollar_pic_bot
+```
+```bash
+nano .env #(Заполняем .env как в примере выше)
+```
+```
+docker-compose up -d
+```
+
+## Запуск без контейнера в фоне:
+```bash
+nano .env #(Заполняем .env как в примере выше )
+```
+```bash
+python src/bot.py &
+```
+
 ## Как это выглядит со тороны:
 <img src="https://github.com/onorridg/dollar_pic_bot/assets/83474704/c2de22ab-7582-4093-aad3-d99bac2ab33b" width="30%" height="30%"></br>
 <img src="https://github.com/onorridg/dollar_pic_bot/assets/83474704/f980ccb9-b4ca-487a-8f52-3fe0755802cf" width="30%" height="30%">
+
+## FAQ
+* Зачем нужно было использовать закрытый api apple, не у всех же есть устройство на ios ? 
+  ```На данный момент мне неизвестно ни одного бесплатного api, который позволял бы бесплатно делать запросы каждые 10 минут (это довольно часто). Единственный вариант - это парсить какой-нибудь ресурс, но мне это не интересно.```
