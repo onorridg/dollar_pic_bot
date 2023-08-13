@@ -22,7 +22,9 @@ def set_photo(flag=0):
     photo = open(IMG_NAME, 'rb')
     bot.set_chat_photo(TG_GROUP_ID, photo)
     message = bot.send_message(TG_GROUP_ID, '.')
+    time.sleep(0.1)
     bot.delete_message(TG_GROUP_ID, message.id)
+    time.sleep(0.1)
     bot.delete_message(TG_GROUP_ID, message.id - 1)
     photo.close()
 
