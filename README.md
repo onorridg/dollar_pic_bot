@@ -43,3 +43,5 @@ https://api.telegram.org/bot<YourBOTToken>/getUpdates
 * Удаление сообщений (удаление сообщений об изменении фото, и для удаления самого обновленного фото из сообщений. Всё это нужно, чтобы не засорять группу.)
 
 ## Как это выглядит со тороны:
+<img src="https://github.com/onorridg/dollar_pic_bot/assets/83474704/c2de22ab-7582-4093-aad3-d99bac2ab33b" width="30%" height="30%"></br>
+<img src="https://github.com/onorridg/dollar_pic_bot/assets/83474704/f980ccb9-b4ca-487a-8f52-3fe0755802cf" width="30%" height="30%">
