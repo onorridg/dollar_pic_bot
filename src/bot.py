@@ -1,6 +1,7 @@
 import os
 import time
 import logging
+import sys
 
 from apple_stocks_api import get_dollar
 from gen_pic import get_img
@@ -17,7 +18,6 @@ TG_GROUP_ID = int(os.getenv('TG_GROUP_ID'))
 IMG_NAME = 'stocks_rub.png'
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
-
 
 
 def set_photo(flag=0):
@@ -40,16 +40,20 @@ def get_result():
         )
 
 
-bot.send_message(TG_ADMIN_ID, f'[+] Bot started')
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+bot.send_message(TG_ADMIN_ID, '[+] Bot started')
+logger.info('[+] Bot started')
+
 while True:
     try:
         get_result()
         set_photo()
         time.sleep(600)
-    except telebot.NameResolutionError as err:
-        continue
     except Exception as err:
-        print(err)
+        logger.error(err)
+        time.sleep(1)
         continue
 
     
