@@ -1,5 +1,6 @@
 import os
 import time
+import logging
 
 from apple_stocks_api import get_dollar
 from gen_pic import get_img
@@ -16,6 +17,7 @@ TG_GROUP_ID = int(os.getenv('TG_GROUP_ID'))
 IMG_NAME = 'stocks_rub.png'
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
+
 
 
 def set_photo(flag=0):
@@ -39,10 +41,15 @@ def get_result():
 
 
 bot.send_message(TG_ADMIN_ID, f'[+] Bot started')
-try:
-    while True:
+while True:
+    try:
         get_result()
         set_photo()
         time.sleep(600)
-except Exception as err:
-    bot.send_message(TG_ADMIN_ID, f'[!] Bot offline !\n\n{err}')
+    except telebot.NameResolutionError as err:
+        continue
+    except Exception as err:
+        logging.ERROR
+        continue
+
+    
