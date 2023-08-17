@@ -49,7 +49,7 @@ while True:
     except telebot.NameResolutionError as err:
         continue
     except Exception as err:
-        logging.ERROR
+        print(err)
         continue
 
     
