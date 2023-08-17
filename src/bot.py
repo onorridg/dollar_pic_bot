@@ -40,7 +40,7 @@ def get_result():
         )
 
 
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+logging.basicConfig(stream=sys.stdout, level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
 bot.send_message(TG_ADMIN_ID, '[+] Bot started')
